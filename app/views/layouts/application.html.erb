@@ -11,6 +11,14 @@
   </head>
 
   <body>
-    <%= yield %>
+    <%= render 'layouts/header'%>
+    <div class="ui container">
+      <%= yield %>
+    </div>
   </body>
+  <script type="text/javascript">
+    $(document).on('ready turbolinks:load', function () {
+      $('.ui.dropdown').dropdown();
+    });
+  </script>
 </html>
